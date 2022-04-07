@@ -2,6 +2,7 @@
   <input type="text" placeholder="Username" id="username" [(ngModel)]="miUsuario.nombre">  
   <input type="password" placeholder="Password" id="password" [(ngModel)]="miUsuario.clave">  
   <!-- <a href="#" class="forgot">forgot password?</a> -->
+  <input style="margin-top: 10px; margin-left: 10px; background-color:  #37a69b; color:beige; border-style: none;" type="button" value = 'Loguear como invitado' (click)="invitado()">
   <input type="submit" value="Sign In" (click)="onSubmit()">
 </div>
 

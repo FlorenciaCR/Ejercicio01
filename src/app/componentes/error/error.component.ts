@@ -20,7 +20,8 @@ export class ErrorComponent implements OnInit {
   volverLogin()
   {
     //getBaseHref = localhost:4200/
-    this.router.navigate([this.locationStrategy.getBaseHref() +'login']);
+    //this.router.navigate([this.locationStrategy.getBaseHref() +'login']);
+    this.router.navigate(['login']);
   }
 
 

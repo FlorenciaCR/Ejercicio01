@@ -16,12 +16,11 @@ export class LoginComponent implements OnInit {
   miUsuario : Usuario = new Usuario();
 
   constructor(
-    private router : Router,
-    private activatedRoute : ActivatedRoute,
-    private locationStrategy: LocationStrategy){ 
+    private router : Router){ 
     this.usuarios = Usuarios;
   }
-
+  // private activatedRoute : ActivatedRoute,
+  // private locationStrategy: LocationStrategy
    //router cambia de componentes
    //ActivatedRoute obtiene la ruta ACTUAL. 
    //En router.navigate, el primer parametro es a que url me quiero dirigir (para poder dirigirme a dicha url esta url tiene que tener vinculado un componente en la clase )
@@ -29,14 +28,22 @@ export class LoginComponent implements OnInit {
    //una ruta o string y al final de esta ruta se le suma el primer parametro de la funcion router.navigate.
    //Agregue locationStrategy para obtener la url base (localhost:4200/) con la funcion getBaseHref
 
+  invitado()
+  {
+    this.miUsuario.nombre = 'Invitado';
+    this.miUsuario.clave = '123';
+  }
+
   onSubmit()
   {
     if(this.validarUsuario())
     {
-      this.router.navigate([this.locationStrategy.getBaseHref() +'bienvenido']);
+      //this.router.navigate([this.locationStrategy.getBaseHref() +'bienvenido']);
+      this.router.navigate(['bienvenido']);
     }else{
       //this.router.navigate(['error'], { relativeTo: this.activatedRoute}); No puedo hacer esto porque seria login/error y no existe.
-      this.router.navigate([this.locationStrategy.getBaseHref() +'error']);
+      //this.router.navigate([this.locationStrategy.getBaseHref() +'error']);
+      this.router.navigate(['error']);
     }
   }
 

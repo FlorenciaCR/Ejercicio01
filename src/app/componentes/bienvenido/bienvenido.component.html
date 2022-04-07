@@ -22,20 +22,20 @@
 
 <label for="promedio">Promedio:
   <input 
-      type="number" 
-      name="promedio" 
+      type="number"  
       id="promedio"
-      [(ngModel)]=promedio>
+      [(ngModel)]="promedio">
 </label>
 
 <label for="suma">
   <input 
       type="number"
-      name="suma"
       id="suma"
-      [(ngModel)]=suma>
+      [(ngModel)]="suma">
 </label>
 <br><br>
 <button (click)=onClickCalcularSumaPromedio()>Calcular</button>
 <button (click)=onClickLimpiarCuadros()>Limpiar Cuadros De Texto</button>
+<br><br>
+<button (click)="volverLogin()">Volver login</button>
 

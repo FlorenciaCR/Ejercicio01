@@ -13,4 +13,8 @@ export const Usuarios : Usuario [] = [
         nombre: 'Popo',
         clave : '321',
     },
+    {
+        nombre: 'Invitado',
+        clave : '123',
+    }
 ]
